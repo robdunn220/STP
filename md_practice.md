@@ -2,7 +2,7 @@
 ## **Four Pillars**
 - Encapsulation
 - Abstraction
-- Polymorphic
+- Polymorphism
 - Inheritance
 ## **Encapsulation**
 - Object variables and methods are located within the class the object is defined in
@@ -23,3 +23,10 @@ class PublicPrivateExample
         # Clients shouldn't use this
         pass
 ```
+## Abstraction
+- Process of taking away or removing characteristics from something in order to reduce it to a set of essential characteristics
+- This occurs in OOP through creating objects from the Class models
+## Polymorphism
+- The ability to present the same interface (function or method) for different underlying data types
+- E.g. the print() function
+- You can print multiple different data types to the console and the underlying method remains the same
