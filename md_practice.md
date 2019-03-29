@@ -30,3 +30,6 @@ class PublicPrivateExample
 - The ability to present the same interface (function or method) for different underlying data types
 - E.g. the print() function
 - You can print multiple different data types to the console and the underlying method remains the same
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTEyODk2OTc1NTNdfQ==
+-->
