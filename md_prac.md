@@ -10,7 +10,7 @@
 - This allows for clients using the code to create instances of the objects without modifying the actual variables and methods of the class
 - In Python, there are no private variables or methods. You can only use naming conventions to warn the client to use at their own discretion
 
-  ```
+  ```python
   class PublicPrivateExample
       def __init__(self):
           self.public = 'safe'
@@ -34,7 +34,7 @@
 - E.g. the print() function
 - You can print multiple different data types to the console and the underlying method remains the same
 
-  ```
+  ```python
   print('Hello, World!')
   print(200)
   ```
@@ -48,7 +48,8 @@
   - The class inheriting attributes is called the **_child class_**
   - The classing whose attributes are being inherited is the **_parent class_**
 - Here is an example of inheritance using a Shape class
-  ```
+
+  ```python
   class Shape():
       def __init__(self, w, l):
           self.width = w
@@ -63,7 +64,8 @@
 - You can use this to have general attributes and methods in the parent class, but more specific methods and attributes in the child
 - For example, many shapes have similar attributes like length and width, but sometimes the area or volume are calculated differently
 - You can use the child class to have a specific method, i.e. the calculation of a squares area
-  ```
+
+  ```python
   # Uses the Shape class created above as the parent
   class Square(Shape):
       def area(self):
@@ -76,7 +78,76 @@
 ## Composition
 - When you store an object as a variable in another object
 
-
+******
 # **Ch. 14: More OOP**
 ## Class variables vs Instance Variables
 - Classes have two types of variables: **_class variables_** and **_instance variables_**
+- Instance variables are the attributes created when an instance of the class is created
+
+  ```python
+  class Shape():
+      def __init__(self, w, l):
+          # These are the instance variables
+          self.width = w
+          self.len = l
+  ```
+- Class variables belong to the class itself, not the instances of the class
+
+  ```python
+  class Shape():
+      # This list of rectangle objects is a class variable
+      recList = []
+  ```
+## Magic Methods
+- Every class in Python inherits from a parent class called **_Object_**
+
+  ```python
+  class Lion:
+      def __init__(self, name):
+          self.name = name
+
+  lion = Lion('Dilbert')
+  print(lion)
+
+  >> <__main__.Lion object at 0x101178828>
+  ```
+- __init__ is a **_magic method_** that initializes an instance of the class object
+- Another default class magic method is __repr__, which is called when you print a class object
+- Usually, it prints the type and location of the object, as in the example
+- However, you can override magic methods
+
+  ```python
+  class Lion:
+      def __init__(self, name):
+          self.name = name
+
+      def __repr__(self):
+          return self.name
+
+  lion = Lion('Dilbert')
+  print(lion)
+
+  >> Dilbert
+  ```
+- Even simple addition, such as 2 + 2, invokes a magic method, __add__, in Python. This can also be overridden
+
+  ```python
+  class Add:
+      def __init__(self, x):
+          self.x = x
+
+      def __add__(self, other):
+          return self.x - other.x
+
+  a = Add(4)
+  b = Add(6)
+
+  print(a + b)
+
+  >> -2
+  ```
+
+******
+# **Ch. 15: Bringing It All Together**
+## Cards
+- Create the card game War
