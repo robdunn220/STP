@@ -150,4 +150,59 @@
 ******
 # **Ch. 15: Bringing It All Together**
 ## Cards
-- Create the card game War
+- Created the card game War
+
+******
+# **Ch. 16: Bash**
+## Navigating
+- I'm pretty familiar with many of these
+- cd, followed by the directory you wish to navigate to
+- pwd, prints location and name of current directory
+- ls, lists the files and folders in your current directory
+- mkdir, followed by the name for the new directory, makes a new directory
+- rmdir, followed by the name of a current directory, removes the directory
+- touch, followed by file name and extension, creates a new file
+
+******
+# **Ch. 17: Regular Expressions**
+## Setup
+- **Regular Expressions** are a sequence of characters that define a search pattern
+
+## A Simple Match
+- You can use the built-in Python module, **_re_**, to  evaluate expressions
+
+  ```python
+  import re
+
+  l = 'Beautiful is better than ugly.'
+  # Uses the findall method to find instances of expressions
+  matches = re.findall('Beautiful', l)
+
+  print(matches)
+  ```
+
+******
+# **Ch. 18: Package Manager**
+- I already know this shit
+
+******
+# **Ch. 19: Version Control**
+- Just about repositories and git control
+
+******
+# **Ch. 20: Bringing It All Together**
+## Web Scraping
+- Scrape Google news using Beautiful Soup, pretty familiar with it
+
+  ```python
+  import urllib.request
+  form bs4 import BeautifulSoup
+
+  class Scraper:
+    def __init__(self, site):
+      self.site = site
+    def scrape(self):
+      r = urllib.request.urlopen(self.site)
+      html = r.read()
+      sp = BeautifulSoup(html, 'html.parser')
+  ```
