@@ -206,3 +206,14 @@
       html = r.read()
       sp = BeautifulSoup(html, 'html.parser')
   ```
+
+******
+# **Ch. 21: Data Structures**
+## Stacks
+- A **stack** is a data structure
+- Similar to a list, you can add and remove items from a stack
+- However, you can only add and remove the last item
+- This is referred to as pushing and popping
+- It is considered a last-in-first-out data structure
+## Queue
+- Opposite of a stack: first-in-first-out data structure
